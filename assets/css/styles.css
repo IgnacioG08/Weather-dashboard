@@ -1,0 +1,39 @@
+ 
+ 
+ .navbar-expand-lg {
+    background-color: var(--bs-primary);
+ }
+
+ .btn {
+    background-color: var(--bs-secondary-color);
+ }
+
+ button.btn.btn-primary {
+    width: 350px;
+ }
+
+ .form-control {
+   width: 350px; 
+   margin-left: 90px;
+  
+ }
+
+ .form-label {
+    font-size: x-large;
+    font-weight: bold;
+ }
+
+ .data {
+   height: 250px;
+   border: 1px solid black;
+   margin-top: 10px;
+
+ }
+
+ .future-data {
+   height: 350px;
+ }
+
+ .results {
+   height: 800px;
+ }
