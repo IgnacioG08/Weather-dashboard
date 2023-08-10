@@ -22,9 +22,11 @@
   <section class="container-fluid text-center">
     <div class="row">
       <aside class="search col-xl-4 mx-3">
-        <label for="exampleDataList" class="form-label mt-1 ms-3">Search For a City:</label>
-        <input class="form-control mb-4" list="datalistOptions" id="exampleDataList"
+        <label for="cityDataList" class="form-label mt-1 ms-3">Search For a City:</label>
+        
+        <input class="form-control mb-4" list="datalistOptions" id="cityDataList"
           placeholder="Type to search...">
+          
         <datalist id="datalistOptions">
           <option value="Colton">
           <option value="Riverside">
@@ -32,8 +34,10 @@
           <option value="Fontana">
           <option value="Ontario">
         </datalist>
+        
 
         <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+          <button id="search">Search</button>
           <button type="button" class="btn btn-primary mb-3">Colton</button>
           <button type="button" class="btn btn-primary mb-3">Riverside</button>
           <button type="button" class="btn btn-primary mb-3">San Bernardino</button>
@@ -55,48 +59,44 @@
           <h5 class="five-day text-start fw-bolder">5 Day Forecast:</h5>
 
           <div class="row">
-            <div class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 160px; height: 350px;">
-              <div class="card-header">Header</div>
+
+            <div id="day1" class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 200px; height: 350px;">
+            
               <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
+                <h5 class="card-title"></h5>
+                <div class="card-text"></div>
               </div>
             </div>
 
-            <div class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 160px; height: 350px;">
-              <div class="card-header">Header</div>
+            <div id="day2" class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 200px; height: 350px;">
+              
               <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
+                <h5 class="card-title"></h5>
+                <div class="card-text"></div>
               </div>
             </div>
 
-            <div class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 160px; height: 350px;">
-              <div class="card-header">Header</div>
+            <div id="day3" class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 200px; height: 350px;">
+              
               <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
+                <h5 class="card-title"></h5>
+                <div class="card-text"></div>
               </div>
             </div>
 
-            <div class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 160px; height: 350px;">
-              <div class="card-header">Header</div>
+            <div id="day4" class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 200px; height: 350px;">
+              
               <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
+                <h5 class="card-title"></h5>
+                <div class="card-text"></div>
               </div>
             </div>
 
-            <div class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 160px; height: 350px;">
-              <div class="card-header">Header</div>
+            <div id="day5" class="card col-2 text-bg-primary mb-3 mx-2" style="max-width: 200px; height: 350px;">
+              
               <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
+                <h5 class="card-title"></h5>
+                <div class="card-text"></div>
               </div>
             </div>
 

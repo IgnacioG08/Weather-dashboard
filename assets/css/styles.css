@@ -24,7 +24,7 @@
  }
 
  .data {
-   height: 250px;
+   height: 300px;
    border: 1px solid black;
    margin-top: 10px;
 
@@ -36,4 +36,13 @@
 
  .results {
    height: 800px;
+ }
+
+ .card-title {
+  font-size: large;
+ }
+
+ button#search {
+  margin-left: 150px;
+  margin-bottom: 20px;
  }
