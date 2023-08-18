@@ -1,8 +1,12 @@
+// Global Variables
 var data;
 var APIKey = "70fce93dd67b82780f4df3ac5fb8b21a";
 var city = ["Colton", "Riverside", "San Bernardino", "Fontana", "Ontario", "Redlands", "Moreno Valley", "Rialto"]
 
 
+// Functions 
+
+// Function grabs city searched
 function getCity() {
     let city = document.getElementById("cityDataList").value;
     saveCity(city);
@@ -10,6 +14,7 @@ function getCity() {
 
 }
 
+// Grabs the data for the actual weather displayed
 function getWeather(city) {
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
     fetch(queryURL).then(function (response){
@@ -39,6 +44,7 @@ function getWeather(city) {
     })
 }
 
+// Grabs the future forecast for searched city
 function getForecast(city) {
     var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + APIKey;
     fetch(queryURL).then(function (response){
@@ -72,6 +78,7 @@ function getForecast(city) {
     })
 }
 
+// Local Storage
 function saveCity(city) {
     let cities = localStorage.getItem("cities");
     if(cities) {
@@ -87,6 +94,7 @@ function saveCity(city) {
     loadCities();
 }
 
+// Buttons from local storage from previous searches
 function loadCities() {
     document.getElementById("cities").innerHTML = "";
     let cities = localStorage.getItem("cities");
@@ -107,6 +115,7 @@ function loadCities() {
     }
 }
 
+// Event Listener
 window.onload = function() {
     document.getElementById("search").addEventListener("click", getCity)
     loadCities();
