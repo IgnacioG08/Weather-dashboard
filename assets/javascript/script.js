@@ -5,7 +5,8 @@ var city = ["Colton", "Riverside", "San Bernardino", "Fontana", "Ontario", "Redl
 
 function getCity() {
     let city = document.getElementById("cityDataList").value;
-    getWeather(city)
+    saveCity(city);
+    getWeather(city);
 
 }
 
@@ -71,9 +72,46 @@ function getForecast(city) {
     })
 }
 
+function saveCity(city) {
+    let cities = localStorage.getItem("cities");
+    if(cities) {
+        if(cities.includes(city)) {
+            return;
+        }
+        cities += city + ";"
+    }
+    else {
+        cities = city + ";"
+    }
+    localStorage.setItem("cities", cities);
+    loadCities();
+}
+
+function loadCities() {
+    document.getElementById("cities").innerHTML = "";
+    let cities = localStorage.getItem("cities");
+    if (cities) {
+        let array = cities.split(";");
+        for( let i = 0; i < array.length - 1; i++) {
+            let city = array[i];
+            let button = document.createElement("button");
+            button.textContent = city;
+            button.classList.add("btn");
+            button.classList.add("btn-primary");
+            button.classList.add("mb-3");
+            button.addEventListener("click", function() {
+                getWeather(city);
+            })
+            document.getElementById("cities").appendChild(button)
+        }
+    }
+}
+
 window.onload = function() {
     document.getElementById("search").addEventListener("click", getCity)
+    loadCities();
 }
+
 
 
 
