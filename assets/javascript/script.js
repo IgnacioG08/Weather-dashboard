@@ -16,7 +16,7 @@ function getCity() {
 
 // Grabs the data for the actual weather displayed
 function getWeather(city) {
-    var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
+    var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
     fetch(queryURL).then(function (response){
         if(response.ok) {
             response.json().then(function (data){
@@ -29,7 +29,7 @@ function getWeather(city) {
                 let day = date.getDate()
                 let year = date.getFullYear()
                 let d = month + "/" + day + "/" + year
-                let icon = "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
+                let icon = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
 
                 let output = "<h2>" + data.name + "</h2>"
                 output += "<h3>" + d + "</h3>"
@@ -46,7 +46,7 @@ function getWeather(city) {
 
 // Grabs the future forecast for searched city
 function getForecast(city) {
-    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${APIKey}`;
+    var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${APIKey}`;
     fetch(queryURL).then(function (response){
         if(response.ok) {
             response.json().then(function (data){
@@ -63,7 +63,7 @@ function getForecast(city) {
                     let temp = data.list[i].main.temp
                     let humidity = data.list[i].main.humidity
                     let windSpeed = data.list[i].wind.speed
-                    let icon = "http://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"
+                    let icon = "https://openweathermap.org/img/wn/" + data.list[i].weather[0].icon + ".png"
                     let output = "" 
                     output += "<p> <img src='" + icon + "'> </p>"
                     output += "<p> Temp: " + temp.toFixed(0) + "&deg; F </p>" 
