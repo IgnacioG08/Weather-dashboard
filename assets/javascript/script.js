@@ -16,7 +16,7 @@ function getCity() {
 
 // Grabs the data for the actual weather displayed
 function getWeather(city) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
+    var queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APIKey}`;
     fetch(queryURL).then(function (response){
         if(response.ok) {
             response.json().then(function (data){
@@ -46,7 +46,7 @@ function getWeather(city) {
 
 // Grabs the future forecast for searched city
 function getForecast(city) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + APIKey;
+    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${APIKey}`;
     fetch(queryURL).then(function (response){
         if(response.ok) {
             response.json().then(function (data){
